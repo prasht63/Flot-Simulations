@@ -26,7 +26,7 @@ $(function() {
 			var i=0;
 			data[1]=0;
 			data[index]=data[index-1]*0.93+5;
-			data2[index]=data[index]*data2[index];
+			
 			if(data[index]>=58  && thresholdflagged==0)
 			{
 				alert("Threshold Value Reached");
