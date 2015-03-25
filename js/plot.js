@@ -1,17 +1,14 @@
 $(function() {
 
-		// We use an inline data source in the example, usually data would
-		// be fetched from a server
-		var dataset=[];
+		
 		var data=[];
-		var data2=[];		
 		var index=0;
-		var thresholdflagged=0;
-		// Set up the control widget
+		var thresholdflagged=0; //to check threshold reached or not
+		
 
 
 		
-		var updateInterval = 300;
+		var updateInterval = 1500;
 		$("#updateInterval").val(updateInterval).change(function () {
 			var v = $(this).val();
 			if (v && !isNaN(+v)) {
@@ -51,7 +48,7 @@ $(function() {
 					color: "rgb(200, 20, 30)"
 				},
 				shadowSize: 0,
-				animate:1	// Drawing is faster without shadows
+				animate:1	
 			},
 			
 			xaxis: {
@@ -82,9 +79,9 @@ $(function() {
 
 			plot.draw();
 			index++;
-			if(index<600)
+			if(index<100)
 			{
-			setTimeout(update,1000);	
+			setTimeout(update,updateInterval);	
 			}
 		}
 
